@@ -48,3 +48,31 @@ body, html {
 .bottom-nav a:hover {
   color: orange;
 }
+
+.stepped-div {
+    width: 200px;  /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    background-color: #3498db; /* Example color */
+    position: relative;
+}
+
+.stepped-div::before,
+.stepped-div::after {
+    content: "";
+    position: absolute;
+    width: 50px; /* Adjust for the width of the step */
+    height: 50px; /* Adjust for the height of the step */
+    background-color: #3498db; /* Match parent background */
+}
+
+.stepped-div::before {
+    top: 50px;  /* Position of the top step */
+    left: 100%; /* Position outside the parent div */
+    transform: translateX(-50%); /* Adjust to move the step relative to its left edge */
+}
+
+.stepped-div::after {
+    bottom: 50px; /* Position of the bottom step */
+    left: 100%; /* Position outside the parent div */
+    transform: translateX(-50%); /* Adjust to move the step relative to its left edge */
+}
